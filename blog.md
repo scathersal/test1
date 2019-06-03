@@ -1,4 +1,19 @@
-# powershell-ci-pipeline-with-aws
+# Building a Powershell CI Pipeline
+PowerShell Core became GA several days ago. It's an exciting news for the PowerShell community as it is developed with the open source community and being true cross platform.There is a lot challenges ahead , however, for us PowerShell users to refresh the current script, functions, and modules to be PowerShell Core compatible. Why would someone want to do that? To me the answer is simplicity. I look forward to the day that I use PowerShell to build tooling that work (almost) everywhere. And that day has come.
+
+When I write a PowerShell function/ module, I **try** follow the process as much as possible:
+
+1. Create a new Git repo and in it a new branch.
+1. Write down what I want the function to do in ReadMe.
+1. Explore and try what currently available cmdlets/ functions can help me achieve the goal.
+1. Create a Pester test file starting with a single describe block and put my goal in the description.
+1. Write Pester test (success logic path, outputs, inputs, failure logic path), git commit/ push
+1. Write code that pass, git commit/ push
+1. Repeat the Pester test - code cycle. Refactor as progress
+1. When I feel it's *-Not* messy enough. Release the module for review/ pull request.
+
+It's easy to run those tests locally. But, how do I know it's actually going to pass when running in another environment? How do I ensure people working on the codes follow the same process? Mor importantly, how much confidence will I have for a function's integrity? 
+
 A serverless continuous integration pipeline for PowerShell module leveraging AWS services to improve development experience.
 
 ## What should the development experience be like
