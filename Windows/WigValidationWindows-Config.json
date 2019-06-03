@@ -1,0 +1,20 @@
+{
+  "Windows": [
+    {
+        "TestName": "Get-FreeDiskSpace",
+        "Enabled": true,
+        "Params": {
+            "MinimumSizeInGB": 10,
+            "DriveLetter": "C"
+        }
+    },
+    {
+        "TestName": "Get-FreeDiskSpace",
+        "Enabled": true,
+        "Params": {
+            "MinimumSizeInGB": 20,
+            "DriveLetter": "C"
+        }
+    }
+  ]
+}
