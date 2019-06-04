@@ -9,7 +9,7 @@
         }
     },
     {
-        "TestName": "Get-FreeDiskSpace",
+        "TestName": "Get-FreeDiskSpace2",
         "Enabled": true,
         "Params": {
             "MinimumSizeInGB": 20,

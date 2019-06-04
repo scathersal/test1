@@ -3,7 +3,7 @@ task default -depends Test, Linting
 FormatTaskName "********* {0} *********"
 
 task Linting {
-    $Lintingesults = Invoke-ScriptAnalyzer -Path $PSScriptRoot\..\PowerShellModule\Test-Connection\Public\Test-Connection.ps1 -Severity 'Error', 'Warning' -Recurse
+    $Lintingesults = Invoke-ScriptAnalyzer -Path $PSScriptRoot\..\PowerShell\WIGValidationWindows-Module.psm1 -Severity 'Error', 'Warning' -Recurse
     if ($Lintingesults)
     {
         $Lintingesults | Write-Output
@@ -14,7 +14,7 @@ task Linting {
 
 
 task Test -depends Linting {
-    $testResults = Invoke-Pester -Script $PSScriptRoot\..\PowerShellModule\Test-Connection\Tests\Test-Connection.tests.ps1 -PassThru
+    $testResults = Invoke-Pester -Script $PSScriptRoot\..\PowerShell\WIGValidationWindows-Pester.tests.ps1 -PassThru
     if ($testResults.FailedCount -gt 0)
     {
         $testResults | Format-List
