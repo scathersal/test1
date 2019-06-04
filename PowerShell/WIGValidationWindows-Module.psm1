@@ -32,7 +32,7 @@ function Get-FreeDiskSpace {
 
     Write-debug "Info - Attempting to ger free disk space"
 
-    $FreeSpaceInGBLong = [long]((Get-WmiObject Win32_LogicalDisk -Filter "DeviceID='$($DriveLetter):'").freespace)/1GB
+    $FreeSpaceInGBLong = [long]((get-ciminstance Win32_LogicalDisk -Filter "DeviceID='$($DriveLetter):'").freespace)/1GB
     $FreeSpaceInGB = [math]::Round($FreeSpaceInGBLong,2)
 
     Write-debug "Info - Free space for drive $($Driveletter): $($FreeSpaceInGB)"
