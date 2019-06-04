@@ -3,7 +3,7 @@ task default -depends Test, Linting
 FormatTaskName "********* {0} *********"
 
 task Linting {
-    $Lintingesults = Invoke-ScriptAnalyzer -Path $PSScriptRoot\..\PowerShell\WIGValidationWindows-Module.psm1 -Severity 'Error', 'Warning' -Recurse
+    $Lintingesults = Invoke-ScriptAnalyzer -Path $PSScriptRoot\..\PowerShell\WIGValidationWindows-Module.psm1 -Severity 'Error' -Recurse
     if ($Lintingesults)
     {
         $Lintingesults | Write-Output
