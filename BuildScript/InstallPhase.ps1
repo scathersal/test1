@@ -1,7 +1,3 @@
-param (
-    [string]$stage,
-    [string]$CodeBuildID
-)
 
 $PSVersionTable
 

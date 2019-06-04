@@ -8,7 +8,7 @@ phases:
   install:
     commands:
       - echo $testvariable
-      - powershell ./BuildScript/InstallPhase.ps1 -CodeBuildID $CODEBUILD_BUILD_ID
+      - powershell ./BuildScript/InstallPhase.ps1
   pre_build:
     commands:
   build:
