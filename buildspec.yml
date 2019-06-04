@@ -8,7 +8,7 @@ phases:
   install:
     commands:
       - write-output $testvariable
-      - Get-ChildItem env:
+      - Get-ChildItem "env:"
       - powershell ./BuildScript/InstallPhase.ps1
   pre_build:
     commands:
