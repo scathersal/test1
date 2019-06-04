@@ -140,10 +140,9 @@ Resources:
       Artifacts:
         Type: CODEPIPELINE
       Environment:
-        Type: LINUX_CONTAINER
-        ComputeType: BUILD_GENERAL1_SMALL
-        Image:
-          !Ref CodeBuildImage
+        ComputeType: BUILD_GENERAL1_MEDIUM
+        Image: aws/codebuild/windows-base:1.0
+        Type: WINDOWS_CONTAINER
         PrivilegedMode: False
         EnvironmentVariables:
           - Name: Stage
