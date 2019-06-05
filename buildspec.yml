@@ -23,5 +23,5 @@ phases:
       - powershell ./BuildScript/BuildPhase.ps1 -CodeBuildID $ENV:CODEBUILD_BUILD_ID
 artifacts:
   files:
-    - '**/*'
-  base-directory: PowerShell
+    - PowerShell/**/*
+  name: WigValidation-$(date +%Y-%m-%d)
